@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraFollowing : MonoBehaviour
 {
@@ -13,16 +12,15 @@ public class CameraFollowing : MonoBehaviour
         _balloon = balloon; 
     }
 
-    public IEnumerator StartFolowing()
+    private void Update()
     {
-        while (true)
+        if (_balloon != null)
         {
             transform.position = Vector3.MoveTowards(
-            transform.position,
-            new Vector3(_balloon.position.x, _balloon.position.y + _offset, transform.position.z),
-            _followingSpeed * Time.deltaTime
+                transform.position,
+                new Vector3(_balloon.position.x, _balloon.position.y + _offset, transform.position.z),
+                _followingSpeed * Time.deltaTime
             );
-            yield return new WaitForEndOfFrame();
         }
     }
 }

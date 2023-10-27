@@ -13,15 +13,14 @@ public class CompositionRoot : MonoBehaviour
     public void Awake()
     {
         BalloonView balloon = Instantiate(_balloon, _playerStartPosition, Quaternion.identity);
-        BalloonModel balloonModel = new BalloonModel(balloon);
+        BalloonModel balloonModel = new BalloonModel(balloon, _playerStartPosition);
         _balloonPresenter = new BalloonPresenter(balloonModel, _balloonRisingSpeed, _balloonRisingDelta);
         balloon.Initialize(_balloonPresenter);
-        _camera.Initialize(_balloon.transform, _balloonRisingSpeed);
+        _camera.Initialize(balloon.transform, _balloonRisingSpeed);
     }
 
     public void StartGame()
     {
         StartCoroutine(_balloonPresenter.StartRisingUp());
-        StartCoroutine(_camera.StartFolowing());
     }
 }

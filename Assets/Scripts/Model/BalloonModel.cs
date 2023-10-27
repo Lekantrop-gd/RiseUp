@@ -5,9 +5,10 @@ public class BalloonModel
     private Vector2 _position;
     private BalloonView _balloonView;
 
-    public BalloonModel(BalloonView balloonView)
+    public BalloonModel(BalloonView balloonView, Vector2 startPosition)
     {
         _balloonView = balloonView;
+        _position = startPosition;
     }
 
     public void SetPosition(Vector2 position)
