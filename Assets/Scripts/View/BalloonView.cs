@@ -5,9 +5,9 @@ public class BalloonView : MonoBehaviour
 {
     private BalloonPresenter _presenter;
 
-    public void Initialize(BalloonPresenter balloonPresenter)
+    public void Initialize(BalloonPresenter presenter)
     {
-        _presenter = balloonPresenter;
+        _presenter = presenter;
     }
 
     public void SetPosition(Vector2 position)

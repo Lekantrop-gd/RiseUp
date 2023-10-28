@@ -5,10 +5,12 @@ public class CompositionRoot : MonoBehaviour
     [SerializeField] private UIElement[] _uielements;
     [SerializeField] private BalloonView _balloon;
     [SerializeField] private CameraFollowing _camera;
+    [SerializeField] private Protector _protector;
     [SerializeField] private Vector2 _playerStartPosition;
     [SerializeField] private float _balloonRisingSpeed;
     [SerializeField] private float _balloonRisingDelta;
     [SerializeField] private float _animationDuration;
+    [SerializeField] private float _protectorFollowingSpeed;
 
     public void Awake()
     {
@@ -26,5 +28,7 @@ public class CompositionRoot : MonoBehaviour
             uielement.Hide(_animationDuration);
         }
         _balloon.StartRisingUp();
+        _protector = Instantiate(_protector, _playerStartPosition, Quaternion.identity);
+        _protector.Initialize(_protectorFollowingSpeed);
     }
 }

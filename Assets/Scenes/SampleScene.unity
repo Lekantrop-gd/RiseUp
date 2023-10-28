@@ -321,9 +321,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 157553609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027a712af32a02a419feddea74045387, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f5483916bce7f45acf5ba6db8f9466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isButton: 1
 --- !u!1 &426039592
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,9 +455,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 426039592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027a712af32a02a419feddea74045387, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f5483916bce7f45acf5ba6db8f9466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isButton: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,9 +695,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 666584041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027a712af32a02a419feddea74045387, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f5483916bce7f45acf5ba6db8f9466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isButton: 1
 --- !u!1 &681111486
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,20 +745,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uielements:
   - {fileID: 1074778268}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 799073380}
+  - {fileID: 1836671770}
+  - {fileID: 1269798712}
+  - {fileID: 1950199054}
+  - {fileID: 157553616}
+  - {fileID: 1880808801}
+  - {fileID: 426039599}
+  - {fileID: 666584048}
   _balloon: {fileID: 5770129464888976114, guid: f5a8bdc80f28fb74cb9be7ead3e7de53, type: 3}
   _camera: {fileID: 519420033}
+  _protector: {fileID: 2148775728136905493, guid: 80ecf739bb9551b478a3c4350b38ddfe, type: 3}
   _playerStartPosition: {x: 0, y: -2.3}
   _balloonRisingSpeed: 5
   _balloonRisingDelta: 1
   _animationDuration: 0.25
+  _protectorFollowingSpeed: 50
 --- !u!1 &799073375
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,9 +903,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 799073375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027a712af32a02a419feddea74045387, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f5483916bce7f45acf5ba6db8f9466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isButton: 1
 --- !u!1 &864341788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f5483916bce7f45acf5ba6db8f9466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isButton: 0
 --- !u!222 &1074778269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1229,9 +1236,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1269798705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027a712af32a02a419feddea74045387, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f5483916bce7f45acf5ba6db8f9466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isButton: 1
 --- !u!1 &1836671763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,9 +1382,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1836671763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027a712af32a02a419feddea74045387, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f5483916bce7f45acf5ba6db8f9466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isButton: 1
 --- !u!1 &1847226155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,9 +1600,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1880808794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027a712af32a02a419feddea74045387, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f5483916bce7f45acf5ba6db8f9466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isButton: 1
 --- !u!1 &1950199047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,9 +1734,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1950199047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027a712af32a02a419feddea74045387, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f5483916bce7f45acf5ba6db8f9466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isButton: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
