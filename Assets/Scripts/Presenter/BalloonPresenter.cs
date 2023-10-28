@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BalloonPresenter
 {
@@ -14,17 +13,13 @@ public class BalloonPresenter
         _risingDelta = risingDelta;
     }
 
-    public IEnumerator StartRisingUp()
+    public void Move()
     {
-        while (true)
-        {
-            Vector2 position = Vector2.MoveTowards(
-                _model.GetPosition(), 
-                new Vector2(_model.GetPosition().x, _model.GetPosition().y + _risingDelta), 
-                Time.deltaTime * _risingSpeed
-            );
-            _model.SetPosition(position);
-            yield return new WaitForEndOfFrame();
-        }
+        Vector2 position = Vector2.MoveTowards(
+            _model.GetPosition(), 
+            new Vector2(_model.GetPosition().x, _model.GetPosition().y + _risingDelta), 
+            Time.deltaTime * _risingSpeed
+        );
+        _model.SetPosition(position);
     }
 }

@@ -8,23 +8,23 @@ public class CompositionRoot : MonoBehaviour
     [SerializeField] private Vector2 _playerStartPosition;
     [SerializeField] private float _balloonRisingSpeed;
     [SerializeField] private float _balloonRisingDelta;
-    private BalloonPresenter _balloonPresenter;
+    [SerializeField] private float _animationDuration;
 
     public void Awake()
     {
-        BalloonView balloon = Instantiate(_balloon, _playerStartPosition, Quaternion.identity);
-        BalloonModel balloonModel = new BalloonModel(balloon, _playerStartPosition);
-        _balloonPresenter = new BalloonPresenter(balloonModel, _balloonRisingSpeed, _balloonRisingDelta);
-        balloon.Initialize(_balloonPresenter);
-        _camera.Initialize(balloon.transform, _balloonRisingSpeed);
+        _balloon = Instantiate(_balloon, _playerStartPosition, Quaternion.identity);
+        BalloonModel balloonModel = new BalloonModel(_balloon, _playerStartPosition);
+        BalloonPresenter balloonPresenter = new BalloonPresenter(balloonModel, _balloonRisingSpeed, _balloonRisingDelta);
+        _balloon.Initialize(balloonPresenter);
+        _camera.Initialize(_balloon.transform, _balloonRisingSpeed);
     }
 
     public void StartGame()
     {
         foreach (var uielement in _uielements)
         {
-            uielement.Hide();
+            uielement.Hide(_animationDuration);
         }
-        StartCoroutine(_balloonPresenter.StartRisingUp());
+        _balloon.StartRisingUp();
     }
 }

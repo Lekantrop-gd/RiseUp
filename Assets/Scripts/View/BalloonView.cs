@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BalloonView : MonoBehaviour
@@ -12,5 +13,29 @@ public class BalloonView : MonoBehaviour
     public void SetPosition(Vector2 position)
     {
         transform.position = position;
+    }
+
+    private IEnumerator StartMoving()
+    {
+        while (true)
+        {
+            _presenter?.Move();
+            yield return null;
+        }
+    }
+
+    public void StartRisingUp()
+    {
+        StartCoroutine(StartMoving());
+    }
+
+    public void StopRisingUp()
+    {
+        StopCoroutine(StartMoving());
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        StopRisingUp();
     }
 }
