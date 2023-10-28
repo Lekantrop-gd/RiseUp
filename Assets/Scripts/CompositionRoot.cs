@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class CompositionRoot : MonoBehaviour
 {
+    [SerializeField] private UIElement[] _uielements;
     [SerializeField] private BalloonView _balloon;
     [SerializeField] private CameraFollowing _camera;
     [SerializeField] private Vector2 _playerStartPosition;
     [SerializeField] private float _balloonRisingSpeed;
     [SerializeField] private float _balloonRisingDelta;
-
     private BalloonPresenter _balloonPresenter;
 
     public void Awake()
@@ -21,6 +21,10 @@ public class CompositionRoot : MonoBehaviour
 
     public void StartGame()
     {
+        foreach (var uielement in _uielements)
+        {
+            uielement.Hide();
+        }
         StartCoroutine(_balloonPresenter.StartRisingUp());
     }
 }
