@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22627c47fd82fec499af5e82b38ffbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _offset: 2.3
+  _offset: 3
 --- !u!1 &666584041
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +761,7 @@ MonoBehaviour:
   _balloonRisingDelta: 1
   _animationDuration: 0.25
   _protectorFollowingSpeed: 50
+  _cameraFollowingSpeed: 7
 --- !u!1 &799073375
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class CompositionRoot : MonoBehaviour
     [SerializeField] private float _balloonRisingDelta;
     [SerializeField] private float _animationDuration;
     [SerializeField] private float _protectorFollowingSpeed;
+    [SerializeField] private float _cameraFollowingSpeed;
 
     public void Awake()
     {
@@ -18,7 +19,6 @@ public class CompositionRoot : MonoBehaviour
         BalloonModel balloonModel = new BalloonModel(_balloon, _playerStartPosition);
         BalloonPresenter balloonPresenter = new BalloonPresenter(balloonModel, _balloonRisingSpeed, _balloonRisingDelta);
         _balloon.Initialize(balloonPresenter);
-        _camera.Initialize(_balloon.transform, _balloonRisingSpeed);
     }
 
     public void StartGame()
@@ -30,5 +30,6 @@ public class CompositionRoot : MonoBehaviour
         _balloon.StartRisingUp();
         _protector = Instantiate(_protector, _playerStartPosition, Quaternion.identity);
         _protector.Initialize(_protectorFollowingSpeed);
+        _camera.Initialize(_balloon.transform, _cameraFollowingSpeed);
     }
 }

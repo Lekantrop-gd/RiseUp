@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class CameraFollowing : MonoBehaviour
 {
@@ -9,18 +10,20 @@ public class CameraFollowing : MonoBehaviour
     public void Initialize(Transform balloon, float followingSpeed) 
     {  
         _followingSpeed = followingSpeed;
-        _balloon = balloon; 
+        _balloon = balloon;
+        StartCoroutine(StartFollowing());
     }
 
-    private void Update()
+    private IEnumerator StartFollowing()
     {
-        if (_balloon != null)
+        while (true)
         {
             transform.position = Vector3.MoveTowards(
                 transform.position,
                 new Vector3(_balloon.position.x, _balloon.position.y + _offset, transform.position.z),
                 _followingSpeed * Time.deltaTime
             );
+            yield return null;
         }
     }
 }
