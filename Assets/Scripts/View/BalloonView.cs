@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class BalloonView : MonoBehaviour
 {
-    private BalloonPresenter _presenter;
+    public BalloonPresenter _presenter;
+    public Action OnColided;
 
     public void Initialize(BalloonPresenter presenter)
     {
@@ -36,6 +38,7 @@ public class BalloonView : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        StopRisingUp();
+        OnColided?.Invoke();
+        Debug.Log(123);
     }
 }

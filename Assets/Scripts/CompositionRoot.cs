@@ -32,4 +32,19 @@ public class CompositionRoot : MonoBehaviour
         _protector.Initialize(_protectorFollowingSpeed);
         _camera.Initialize(_balloon.transform, _cameraFollowingSpeed);
     }
+
+    private void GameOver()
+    {
+        //Currently empty
+    }
+
+    private void OnEnable()
+    {
+        _balloon.OnColided += GameOver;
+    }
+
+    private void OnDisable()
+    {
+        _balloon.OnColided -= GameOver;
+    }
 }
