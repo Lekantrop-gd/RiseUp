@@ -38,7 +38,9 @@ public class BalloonView : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        OnColided?.Invoke();
-        Debug.Log(123);
+        if (collision.gameObject.TryGetComponent(out Obstacle obstacle))
+        {
+            OnColided?.Invoke();
+        }
     }
 }
