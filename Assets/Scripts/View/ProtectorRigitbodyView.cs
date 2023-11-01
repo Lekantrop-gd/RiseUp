@@ -14,4 +14,9 @@ public class ProtectorRigitbodyView : View
     {
         _rigitbody?.MovePosition(position);
     }
+
+    private void Update()
+    {
+        Presenter?.Move(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+    }
 }

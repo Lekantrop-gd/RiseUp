@@ -9,5 +9,5 @@ public abstract class Presenter
         Model = model;
     }
 
-    public abstract void Move();
+    public abstract void Move(Vector3 target = default);
 }

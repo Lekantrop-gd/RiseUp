@@ -11,7 +11,7 @@ public class BalloonPresenter : Presenter
         _risingDelta = risingDelta;
     }
 
-    public override void Move()
+    public override void Move(Vector3 target)
     {
         Vector2 position = Vector2.MoveTowards(
             Model.GetPosition(), 

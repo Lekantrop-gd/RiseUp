@@ -11,11 +11,11 @@ public class ProtectorPresenter : Presenter
         _followingSpeed = followingSpeed;
     }
 
-    public override void Move()
+    public override void Move(Vector3 target)
     {
         Vector2 position = Vector2.MoveTowards(
             Model.GetPosition(),
-            _balloon.position,
+            target,
             _followingSpeed * Time.deltaTime);
         
         Model.SetPosition(position);
