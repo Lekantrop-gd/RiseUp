@@ -5,7 +5,7 @@ public class CompositionRoot : MonoBehaviour
     [SerializeField] private UIElement[] _uielements;
     [SerializeField] private BalloonView _balloon;
     [SerializeField] private CameraFollowing _camera;
-    [SerializeField] private ProtectorView _protector;
+    [SerializeField] private ProtectorTransformView _protector;
     [SerializeField] private Vector2 _playerStartPosition;
     [SerializeField] private float _balloonRisingSpeed;
     [SerializeField] private float _balloonRisingDelta;

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-public class ProtectorTransformPresenter : Presenter
+public class ProtectorPresenter : Presenter
 {
     private Transform _balloon;
     private float _followingSpeed;
 
-    public ProtectorTransformPresenter(Model model, Transform balloon, float followingSpeed) : base(model)
+    public ProtectorPresenter(Model model, Transform balloon, float followingSpeed) : base(model)
     {
         _balloon = balloon;
         _followingSpeed = followingSpeed;
