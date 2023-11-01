@@ -2,26 +2,15 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class BalloonView : MonoBehaviour
+public class BalloonView : View
 {
-    public BalloonPresenter _presenter;
     public Action OnColided;
-
-    public void Initialize(BalloonPresenter presenter)
-    {
-        _presenter = presenter;
-    }
-
-    public void SetPosition(Vector2 position)
-    {
-        transform.position = position;
-    }
 
     private IEnumerator StartMoving()
     {
         while (true)
         {
-            _presenter?.Move();
+            Presenter?.Move();
             yield return null;
         }
     }

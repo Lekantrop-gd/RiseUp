@@ -1,25 +1,23 @@
 ﻿using UnityEngine;
 
-public class BalloonPresenter
+public class BalloonPresenter : Presenter
 {
-    private BalloonModel _model;
     private float _risingSpeed;
     private float _risingDelta;
 
-    public BalloonPresenter(BalloonModel model, float risingSpeed, float risingDelta)
+    public BalloonPresenter(BalloonModel model, float risingSpeed, float risingDelta) : base(model)
     {
-        _model = model;
         _risingSpeed = risingSpeed;
         _risingDelta = risingDelta;
     }
 
-    public void Move()
+    public override void Move()
     {
         Vector2 position = Vector2.MoveTowards(
-            _model.GetPosition(), 
-            new Vector2(_model.GetPosition().x, _model.GetPosition().y + _risingDelta), 
+            Model.GetPosition(), 
+            new Vector2(Model.GetPosition().x, Model.GetPosition().y + _risingDelta), 
             Time.deltaTime * _risingSpeed
         );
-        _model.SetPosition(position);
+        Model.SetPosition(position);
     }
 }

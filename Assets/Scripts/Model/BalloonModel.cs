@@ -1,24 +1,9 @@
 ﻿using UnityEngine;
 
-public class BalloonModel
+public class BalloonModel : Model
 {
-    private Vector2 _position;
-    private BalloonView _balloonView;
-
-    public BalloonModel(BalloonView balloonView, Vector2 startPosition)
+    public BalloonModel(View view, Vector3 position) : base(view, position)
     {
-        _balloonView = balloonView;
-        _position = startPosition;
-    }
 
-    public void SetPosition(Vector2 position)
-    {
-        _position = position;
-        _balloonView.SetPosition(_position);
-    }
-
-    public Vector2 GetPosition()
-    {
-        return _position;
     }
 }
