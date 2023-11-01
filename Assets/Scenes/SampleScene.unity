@@ -546,7 +546,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -709,6 +709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 681111487}
   - component: {fileID: 681111488}
+  - component: {fileID: 681111489}
   m_Layer: 0
   m_Name: CompositionRoot
   m_TagString: Untagged
@@ -725,7 +726,7 @@ Transform:
   m_GameObject: {fileID: 681111486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -756,12 +757,31 @@ MonoBehaviour:
   _balloon: {fileID: 5770129464888976114, guid: f5a8bdc80f28fb74cb9be7ead3e7de53, type: 3}
   _camera: {fileID: 519420033}
   _protector: {fileID: 2148775728136905493, guid: 80ecf739bb9551b478a3c4350b38ddfe, type: 3}
-  _playerStartPosition: {x: 0, y: -2.3}
+  _levelGenerator: {fileID: 681111489}
+  _playerStartPosition: {x: 0, y: 2.7}
   _balloonRisingSpeed: 5
   _balloonRisingDelta: 1
   _animationDuration: 0.25
   _protectorFollowingSpeed: 50
   _cameraFollowingSpeed: 7
+--- !u!114 &681111489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681111486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1909a7c3c0068314da1500abe90910f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levels:
+  - {fileID: 6565238390054709399, guid: b03e59c37bea02c47a9d2ac86b52553b, type: 3}
+  - {fileID: 6565238390054709399, guid: aa26f40b65658af43ab6d5937944cb9e, type: 3}
+  - {fileID: 6565238390054709399, guid: 9f64ca44a3abd2142ba993f709163169, type: 3}
+  - {fileID: 6565238390054709399, guid: 1d8f93895323c7442ac650fcac021980, type: 3}
+  - {fileID: 6565238390054709399, guid: 110f204990022674f8da76229c305a59, type: 3}
 --- !u!1 &799073375
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +1008,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &864341792
 RectTransform:
@@ -1413,7 +1433,7 @@ Transform:
   m_GameObject: {fileID: 1847226155}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.54, z: 90}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 0.9483334, y: 0.9483334, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1459,7 +1479,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ed99144e8f45e574f9c7ac16964de4ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1746,5 +1766,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1847226156}
   - {fileID: 864341792}
-  - {fileID: 47254655}
   - {fileID: 681111487}
+  - {fileID: 47254655}
