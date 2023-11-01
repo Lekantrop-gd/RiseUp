@@ -5,7 +5,7 @@ public class BalloonPresenter : Presenter
     private float _risingSpeed;
     private float _risingDelta;
 
-    public BalloonPresenter(BalloonModel model, float risingSpeed, float risingDelta) : base(model)
+    public BalloonPresenter(Model model, float risingSpeed, float risingDelta) : base(model)
     {
         _risingSpeed = risingSpeed;
         _risingDelta = risingDelta;
