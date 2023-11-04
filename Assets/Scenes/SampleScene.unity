@@ -761,7 +761,7 @@ MonoBehaviour:
   _protectorTransform: {fileID: 2148775728136905493, guid: 80ecf739bb9551b478a3c4350b38ddfe, type: 3}
   _isProtectorTransform: 0
   _playerStartPosition: {x: 0, y: -2.4}
-  _balloonRisingSpeed: 5
+  _balloonRisingSpeed: 3
   _balloonRisingDelta: 1
   _animationDuration: 0.25
   _protectorFollowingSpeed: 50
@@ -787,7 +787,9 @@ MonoBehaviour:
   - {fileID: 7155954158944910758, guid: aabb5ae443f693d4fa3033a5d61d36a0, type: 3}
   - {fileID: 7155954158944910758, guid: 872a125bcc26fcc409d645db46f1f411, type: 3}
   - {fileID: 7155954158944910758, guid: 30bdb334b6d15ea4cbc7a7488fb1c3c9, type: 3}
-  _levelCount: 45
+  - {fileID: 7155954158944910758, guid: 3a723c50769f571469e4ec0cfb38f04c, type: 3}
+  - {fileID: 7155954158944910758, guid: 22ffaea2afd97a2498c08dc2753c204f, type: 3}
+  _levelCount: 10
 --- !u!1 &799073375
 GameObject:
   m_ObjectHideFlags: 0
