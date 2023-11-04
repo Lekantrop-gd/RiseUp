@@ -3,6 +3,7 @@ using UnityEngine;
 public class CompositionRoot : MonoBehaviour
 {
     [SerializeField] private UIElement[] _uielements;
+    [SerializeField] private LevelGenerator _levelGenerator;
     [SerializeField] private BalloonView _balloon;
     [SerializeField] private CameraFollowing _camera;
     [SerializeField] private View _protectorRigitbody;
@@ -37,6 +38,7 @@ public class CompositionRoot : MonoBehaviour
         protector.Initialize(protectorPresenter);
 
         _camera.Initialize(_balloon.transform, _cameraFollowingSpeed);
+        _levelGenerator.Inialize();
     }
 
     private void GameOver()
