@@ -709,6 +709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 681111487}
   - component: {fileID: 681111488}
+  - component: {fileID: 681111489}
   m_Layer: 0
   m_Name: CompositionRoot
   m_TagString: Untagged
@@ -753,17 +754,40 @@ MonoBehaviour:
   - {fileID: 1880808801}
   - {fileID: 426039599}
   - {fileID: 666584048}
+  _levelGenerator: {fileID: 681111489}
   _balloon: {fileID: 5770129464888976114, guid: f5a8bdc80f28fb74cb9be7ead3e7de53, type: 3}
   _camera: {fileID: 519420033}
   _protectorRigitbody: {fileID: 7662594769326982748, guid: d91170beee9d4a54dbca0965c8bb6d75, type: 3}
   _protectorTransform: {fileID: 2148775728136905493, guid: 80ecf739bb9551b478a3c4350b38ddfe, type: 3}
-  _isProtectorTransform: 1
-  _playerStartPosition: {x: 0, y: 2.4}
+  _isProtectorTransform: 0
+  _playerStartPosition: {x: 0, y: -2.4}
   _balloonRisingSpeed: 5
   _balloonRisingDelta: 1
   _animationDuration: 0.25
   _protectorFollowingSpeed: 50
   _cameraFollowingSpeed: 7
+--- !u!114 &681111489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681111486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4f03e1390657e409b81bb51dd6745c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entryLevel: {fileID: 7155954158944910758, guid: 7d1b9ae68a2b94149909bb3e4961d230, type: 3}
+  _levels:
+  - {fileID: 7155954158944910758, guid: 9f26d36276ad30141a0b45834b373ad3, type: 3}
+  - {fileID: 7155954158944910758, guid: 38f5c1a9f61737348929c6160c371ff2, type: 3}
+  - {fileID: 7155954158944910758, guid: 0e6531d19c184b744b7ed4894772a90e, type: 3}
+  - {fileID: 7155954158944910758, guid: 2a5bd91093380dc42b09c7f5f9800e23, type: 3}
+  - {fileID: 7155954158944910758, guid: aabb5ae443f693d4fa3033a5d61d36a0, type: 3}
+  - {fileID: 7155954158944910758, guid: 872a125bcc26fcc409d645db46f1f411, type: 3}
+  - {fileID: 7155954158944910758, guid: 30bdb334b6d15ea4cbc7a7488fb1c3c9, type: 3}
+  _levelCount: 45
 --- !u!1 &799073375
 GameObject:
   m_ObjectHideFlags: 0
