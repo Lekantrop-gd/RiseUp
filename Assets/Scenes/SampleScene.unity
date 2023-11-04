@@ -546,7 +546,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -725,7 +725,7 @@ Transform:
   m_GameObject: {fileID: 681111486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -758,7 +758,7 @@ MonoBehaviour:
   _protectorRigitbody: {fileID: 7662594769326982748, guid: d91170beee9d4a54dbca0965c8bb6d75, type: 3}
   _protectorTransform: {fileID: 2148775728136905493, guid: 80ecf739bb9551b478a3c4350b38ddfe, type: 3}
   _isProtectorTransform: 1
-  _playerStartPosition: {x: 0, y: 2.7}
+  _playerStartPosition: {x: 0, y: 2.4}
   _balloonRisingSpeed: 5
   _balloonRisingDelta: 1
   _animationDuration: 0.25
@@ -1415,7 +1415,7 @@ Transform:
   m_GameObject: {fileID: 1847226155}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalPosition: {x: 0, y: -2.54, z: 0}
   m_LocalScale: {x: 0.9483334, y: 0.9483334, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
