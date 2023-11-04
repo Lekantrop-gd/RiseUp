@@ -4,8 +4,10 @@ public class CompositionRoot : MonoBehaviour
 {
     [SerializeField] private UIElement[] _uielements;
     [SerializeField] private BalloonView _balloon;
-    [SerializeField] private View _protector;
     [SerializeField] private CameraFollowing _camera;
+    [SerializeField] private View _protectorRigitbody;
+    [SerializeField] private View _protectorTransform;
+    [SerializeField] private bool _isProtectorTransform;
     [SerializeField] private Vector2 _playerStartPosition;
     [SerializeField] private float _balloonRisingSpeed;
     [SerializeField] private float _balloonRisingDelta;
@@ -29,10 +31,10 @@ public class CompositionRoot : MonoBehaviour
         }
         _balloon.StartRisingUp();
 
-        _protector = Instantiate(_protector, _playerStartPosition + Vector2.up, Quaternion.identity);
-        Model protectorModel = new ProtectorModel(_protector, _protector.transform.position);
+        View protector = Instantiate(_isProtectorTransform ? _protectorTransform : _protectorRigitbody, _playerStartPosition + Vector2.up, Quaternion.identity);
+        Model protectorModel = new ProtectorModel(protector, protector.transform.position);
         Presenter protectorPresenter = new ProtectorPresenter(protectorModel, _balloon.transform, _protectorFollowingSpeed);
-        _protector.Initialize(protectorPresenter);
+        protector.Initialize(protectorPresenter);
 
         _camera.Initialize(_balloon.transform, _cameraFollowingSpeed);
     }
