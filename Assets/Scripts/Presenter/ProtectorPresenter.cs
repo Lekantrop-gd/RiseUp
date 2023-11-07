@@ -2,12 +2,10 @@
 
 public class ProtectorPresenter : Presenter
 {
-    private Transform _balloon;
     private float _followingSpeed;
 
-    public ProtectorPresenter(Model model, Transform balloon, float followingSpeed) : base(model)
+    public ProtectorPresenter(Model model, float followingSpeed) : base(model)
     {
-        _balloon = balloon;
         _followingSpeed = followingSpeed;
     }
 
@@ -18,6 +16,7 @@ public class ProtectorPresenter : Presenter
             target,
             _followingSpeed * Time.deltaTime);
         
-        Model.SetPosition(position);
+        //Model.SetPosition(position);
+        Model.SetPosition(target);
     }
 }

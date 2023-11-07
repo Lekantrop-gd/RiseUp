@@ -760,7 +760,7 @@ MonoBehaviour:
   _camera: {fileID: 519420033}
   _protectorRigitbody: {fileID: 7662594769326982748, guid: d91170beee9d4a54dbca0965c8bb6d75, type: 3}
   _protectorTransform: {fileID: 2148775728136905493, guid: 80ecf739bb9551b478a3c4350b38ddfe, type: 3}
-  _isProtectorTransform: 0
+  _isProtectorTransform: 1
   _playerStartPosition: {x: 0, y: -2.4}
   _balloonRisingSpeed: 3
   _balloonRisingDelta: 1
@@ -1022,7 +1022,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &864341792
 RectTransform:

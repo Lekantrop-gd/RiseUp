@@ -34,7 +34,7 @@ public class CompositionRoot : MonoBehaviour
 
         View protector = Instantiate(_isProtectorTransform ? _protectorTransform : _protectorRigitbody, _playerStartPosition + Vector2.up, Quaternion.identity);
         Model protectorModel = new ProtectorModel(protector, protector.transform.position);
-        Presenter protectorPresenter = new ProtectorPresenter(protectorModel, _balloon.transform, _protectorFollowingSpeed);
+        Presenter protectorPresenter = new ProtectorPresenter(protectorModel, _protectorFollowingSpeed);
         protector.Initialize(protectorPresenter);
 
         _camera.Initialize(_balloon.transform, _cameraFollowingSpeed);
