@@ -3,6 +3,8 @@ using UnityEngine;
 public class CompositionRoot : MonoBehaviour
 {
     [SerializeField] private UIElement[] _uielements;
+    [SerializeField] private Score _score;
+    [SerializeField] private LevelText _level;
     [SerializeField] private LevelGenerator _levelGenerator;
     [SerializeField] private BalloonView _balloon;
     [SerializeField] private CameraFollowing _camera;
@@ -20,8 +22,10 @@ public class CompositionRoot : MonoBehaviour
     {
         _balloon = Instantiate(_balloon, _playerStartPosition, Quaternion.identity);
         Model balloonModel = new BalloonModel(_balloon, _playerStartPosition);
-        Presenter balloonPresenter = new BalloonPresenter(balloonModel, _balloonRisingSpeed, _balloonRisingDelta);
+        Presenter balloonPresenter = new BalloonPresenter(balloonModel, _balloonRisingSpeed, _balloonRisingDelta, _score);
         _balloon.Initialize(balloonPresenter);
+
+        _level.Initialize(_levelGenerator.LevelCount);
     }
 
     public void StartGame()
@@ -39,6 +43,8 @@ public class CompositionRoot : MonoBehaviour
 
         _camera.Initialize(_balloon.transform, _cameraFollowingSpeed);
         _levelGenerator.Inialize();
+        _score.Show();
+        _level.Show();
     }
 
     private void GameOver()

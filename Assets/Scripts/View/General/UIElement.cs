@@ -27,6 +27,7 @@ public class UIElement : MonoBehaviour
     }
     public virtual void Show(float animationDuration)
     {
+        gameObject.SetActive(true);
         if (_isButton)
         {
             Button button;
@@ -64,7 +65,5 @@ public class UIElement : MonoBehaviour
             time += Time.deltaTime / animationDuration;
             yield return null;
         }
-
-        gameObject.SetActive(true);
     }
 }

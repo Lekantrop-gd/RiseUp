@@ -5,6 +5,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Level _entryLevel;
     [SerializeField] private Level[] _levels;
     [SerializeField] private int _levelCount;
+    public int LevelCount {  get { return _levelCount; } }
 
     public void Inialize()
     {

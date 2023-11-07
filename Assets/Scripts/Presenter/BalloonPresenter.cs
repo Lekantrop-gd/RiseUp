@@ -4,11 +4,13 @@ public class BalloonPresenter : Presenter
 {
     private float _risingSpeed;
     private float _risingDelta;
+    private Score _score;
 
-    public BalloonPresenter(Model model, float risingSpeed, float risingDelta) : base(model)
+    public BalloonPresenter(Model model, float risingSpeed, float risingDelta, Score score) : base(model)
     {
         _risingSpeed = risingSpeed;
         _risingDelta = risingDelta;
+        _score = score;
     }
 
     public override void Move(Vector3 target)
@@ -19,5 +21,6 @@ public class BalloonPresenter : Presenter
             Time.deltaTime * _risingSpeed
         );
         Model.SetPosition(position);
+        _score.SetScore(position.y > 0 ? Mathf.RoundToInt(position.y) : 0);
     }
 }
