@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CompositionRoot : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class CompositionRoot : MonoBehaviour
 
     private void GameOver()
     {
-        //Currently empty
+        SceneManager.LoadScene(0);
     }
 
     private void OnEnable()
