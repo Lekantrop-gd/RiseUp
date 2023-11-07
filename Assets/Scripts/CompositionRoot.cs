@@ -25,7 +25,7 @@ public class CompositionRoot : MonoBehaviour
         Presenter balloonPresenter = new BalloonPresenter(balloonModel, _balloonRisingSpeed, _balloonRisingDelta, _score);
         _balloon.Initialize(balloonPresenter);
 
-        _level.Initialize(_levelGenerator.LevelCount);
+        _level.Initialize(_levelGenerator.LevelCount, _balloon);
     }
 
     public void StartGame()

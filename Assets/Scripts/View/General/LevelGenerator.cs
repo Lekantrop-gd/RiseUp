@@ -11,7 +11,7 @@ public class LevelGenerator : MonoBehaviour
     {
         Level previousLevel = Instantiate(_entryLevel, Vector2.zero, Quaternion.identity);
 
-        for (int x = 0; x < _levelCount; x++)
+        for (int x = 1; x < _levelCount; x++)
         {
             Level level = _levels[Random.Range(0, _levels.Length)];
             level = Instantiate(level, 

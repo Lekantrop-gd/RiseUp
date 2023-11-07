@@ -5,6 +5,7 @@ using UnityEngine;
 public class BalloonView : View
 {
     public Action OnColided;
+    public Action OnLevelPassed;
 
     private IEnumerator StartMoving()
     {
@@ -30,6 +31,10 @@ public class BalloonView : View
         if (collision.gameObject.TryGetComponent(out Obstacle obstacle))
         {
             OnColided?.Invoke();
+        }
+        else if (collision.gameObject.TryGetComponent(out LevelPass levelPass))
+        {
+            OnLevelPassed?.Invoke();
         }
     }
 }
