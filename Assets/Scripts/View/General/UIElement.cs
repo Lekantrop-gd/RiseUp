@@ -24,7 +24,19 @@ public class UIElement : MonoBehaviour
             }
         }
         StartCoroutine(Vanish(animationDuration));
-    }   
+    }
+    public virtual void Show(float animationDuration)
+    {
+        if (_isButton)
+        {
+            Button button;
+            if (TryGetComponent(out button))
+            {
+                button.interactable = true;
+            }
+        }
+        StartCoroutine(Appear(animationDuration));
+    }
 
     private IEnumerator Vanish(float animationDuration)
     {
@@ -39,5 +51,20 @@ public class UIElement : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+    }
+
+    private IEnumerator Appear(float animationDuration)
+    {
+        float time = 0;
+        Color imageColor = _image.color;
+
+        while (time < 1)
+        {
+            _image.color = Color.Lerp(new Color(imageColor.r, imageColor.g, imageColor.b, 0), new Color(imageColor.r, imageColor.g, imageColor.b, 255), time);
+            time += Time.deltaTime / animationDuration;
+            yield return null;
+        }
+
+        gameObject.SetActive(true);
     }
 }
