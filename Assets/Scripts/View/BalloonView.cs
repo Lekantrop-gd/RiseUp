@@ -32,7 +32,11 @@ public class BalloonView : View
         {
             OnColided?.Invoke();
         }
-        else if (collision.gameObject.TryGetComponent(out LevelPass levelPass))
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out LevelPass levelPass))
         {
             OnLevelPassed?.Invoke();
         }
