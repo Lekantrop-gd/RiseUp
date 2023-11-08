@@ -16,7 +16,6 @@ public class ProtectorPresenter : Presenter
             target,
             _followingSpeed * Time.deltaTime);
         
-        //Model.SetPosition(position);
-        Model.SetPosition(target);
+        Model.SetPosition(position);
     }
 }
