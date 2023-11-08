@@ -10,6 +10,7 @@ public class LevelGenerator : MonoBehaviour
     public void Inialize()
     {
         Level previousLevel = Instantiate(_entryLevel, Vector2.zero, Quaternion.identity);
+        previousLevel.transform.parent = transform;
 
         for (int x = 1; x < _levelCount; x++)
         {
@@ -17,6 +18,7 @@ public class LevelGenerator : MonoBehaviour
             level = Instantiate(level, 
                 new Vector2(0, previousLevel.transform.position.y + previousLevel.GetHeight() / 2 + level.GetHeight() / 2), 
                 Quaternion.identity);
+            level.transform.SetParent(transform);
             level.Initialize(x);
             previousLevel = level;
         }
