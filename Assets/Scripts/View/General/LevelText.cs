@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelText : UIElement
+public class LevelText : MonoBehaviour
 {
     [SerializeField] private Text _text;
     private int _levelNumber;
