@@ -18,6 +18,7 @@ public class CompositionRoot : MonoBehaviour
     [SerializeField] private float _animationDuration;
     [SerializeField] private float _protectorFollowingSpeed;
     [SerializeField] private float _cameraFollowingSpeed;
+    [SerializeField] private float _timeScale;
 
     public void Awake()
     {
@@ -27,6 +28,7 @@ public class CompositionRoot : MonoBehaviour
         _balloon.Initialize(balloonPresenter);
 
         _level.Initialize(_levelGenerator.LevelCount, _balloon);
+        Time.timeScale = _timeScale;
     }
 
     public void StartGame()
