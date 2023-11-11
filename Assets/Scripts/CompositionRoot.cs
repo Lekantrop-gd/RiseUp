@@ -11,6 +11,7 @@ public class CompositionRoot : MonoBehaviour
     [SerializeField] private CameraFollowing _camera;
     [SerializeField] private View _protectorRigitbody;
     [SerializeField] private View _protectorTransform;
+    [SerializeField] private GameObject _gameOverPanel;
     [SerializeField] private bool _isProtectorTransform;
     [SerializeField] private Vector2 _playerStartPosition;
     [SerializeField] private float _balloonRisingSpeed;
@@ -19,6 +20,8 @@ public class CompositionRoot : MonoBehaviour
     [SerializeField] private float _protectorFollowingSpeed;
     [SerializeField] private float _cameraFollowingSpeed;
     [SerializeField] private float _timeScale;
+
+    private View _protector;
 
     public void Awake()
     {
@@ -39,10 +42,10 @@ public class CompositionRoot : MonoBehaviour
         }
         _balloon.StartRisingUp();
 
-        View protector = Instantiate(_isProtectorTransform ? _protectorTransform : _protectorRigitbody, _playerStartPosition + Vector2.up, Quaternion.identity);
-        Model protectorModel = new ProtectorModel(protector, protector.transform.position);
+        _protector = Instantiate(_isProtectorTransform ? _protectorTransform : _protectorRigitbody, _playerStartPosition + Vector2.up, Quaternion.identity);
+        Model protectorModel = new ProtectorModel(_protector, _protector.transform.position);
         Presenter protectorPresenter = new ProtectorPresenter(protectorModel, _protectorFollowingSpeed);
-        protector.Initialize(protectorPresenter);
+        _protector.Initialize(protectorPresenter);
 
         _camera.Initialize(_balloon.transform, _cameraFollowingSpeed);
         _levelGenerator.Inialize();
@@ -51,6 +54,14 @@ public class CompositionRoot : MonoBehaviour
     }
 
     private void GameOver()
+    {
+        _gameOverPanel.SetActive(true);
+        Destroy(_balloon.gameObject);
+        Destroy(_protector.gameObject);
+        Destroy(_camera);
+    }
+
+    public void ReloadScene()
     {
         SceneManager.LoadScene(0);
     }
