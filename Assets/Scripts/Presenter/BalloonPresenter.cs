@@ -21,6 +21,6 @@ public class BalloonPresenter : Presenter
             Time.deltaTime * _risingSpeed
         );
         Model.SetPosition(position);
-        _score.SetScore(position.y > 0 ? Mathf.RoundToInt(position.y) : 0);
+        _score.SetScore(position.y > 0 ? Mathf.RoundToInt(position.y * 3) : 0);
     }
 }
