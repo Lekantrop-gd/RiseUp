@@ -40,7 +40,7 @@ I'm confident that most of you have guessed this simple but wonderful [game from
 
 Common game development cycle consists of 4 more stages (Alpha and Beta Testing, polishing, launch and post-launch support) which I didn’t include because it’s not a commercial product, but just showcase of my skills).
 
-### That was all, very many thanks for your attention!
+### The End
 
 ###### P. S. Screenshots of the final project are provided below.
 ![image](https://github.com/Lekantrop-gd/RiseUp/assets/98541354/d96bc952-2375-4080-af1f-472c1ab2d9da)
