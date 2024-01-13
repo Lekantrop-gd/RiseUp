@@ -42,6 +42,8 @@ Common game development cycle consists of 4 more stages (Alpha and Beta Testing,
 
 ### The End
 
+I appreciate your interest in my work! Wishing you a fantastic day ahead! ❤️
+
 ###### P. S. Screenshots of the final project are provided below.
 ![image](https://github.com/Lekantrop-gd/RiseUp/assets/98541354/d96bc952-2375-4080-af1f-472c1ab2d9da)
 ![image](https://github.com/Lekantrop-gd/RiseUp/assets/98541354/db54d8e1-c392-45df-809d-7a4ac34e6b9d)
