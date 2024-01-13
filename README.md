@@ -39,6 +39,7 @@ I'm confident that most of you have guessed this simple but wonderful [game from
     -	Testing. This step is last, but not least. During the testing I’ve fixed a lot of little bugs in the gameplay and UI, so never underestimate testing. ***Never.***
 
 Common game development cycle consists of 4 more stages (Alpha and Beta Testing, polishing, launch and post-launch support) which I didn’t include because it’s not a commercial product, but just showcase of my skills).
+Find an APK build for your Android device [right here](https://drive.google.com/drive/folders/1BKZLIYNkpnJFt9tOn9V16D7NXW71-VS4?usp=sharing) for easy download and installation. 
 
 ### The End
 
